@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+   <% end %>
+
 <h1>Eding Book</h1>
 
 <% if @book.errors.any? %>
@@ -15,3 +21,6 @@
 <%= f.text_area :body %>
 <br><%= f.submit 'Update Book' %>
 <% end %>
+
+<%= link_to "Show", book_path %>
+<%= link_to "Back", books_path %>
